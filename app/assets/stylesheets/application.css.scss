@@ -16,3 +16,28 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+.home-callout {
+    //Gradient provided by uigradients.com
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}        
+
+body {
+    background-image:url("lines.jpg");
+}
+
+.nav-link {
+    color: #9d9d9d;
+    &:hover {
+        color: white;
+    }
+}
+
+.navbar-brand {
+    color: #9d9d9d;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-toggler {
+    color: #9d9d9d;
+}
