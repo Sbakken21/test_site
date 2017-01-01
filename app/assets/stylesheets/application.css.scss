@@ -38,6 +38,9 @@ body {
     color: #9d9d9d;
 }
 
-.navbar-dark .navbar-brand, .navbar-dark .navbar-toggler {
+.navbar-dark .navbar-nav .nav-link {
     color: #9d9d9d;
+    &:hover {
+        color: white;
+    }
 }
