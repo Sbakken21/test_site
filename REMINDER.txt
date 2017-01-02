@@ -1,0 +1,6 @@
+*Make admin privilages 
+*Fix form layouts (sign in, new post, etc.)
+*Fix routes (specifically new posts needs a route, but preferably only for admin)
+*Look at user database
+*create user customizations
+*possibly add a discord/im chat setup
