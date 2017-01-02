@@ -36,6 +36,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 # Use Font Awesome
 gem 'font-awesome-sass', '~> 4.7.0'
 
+# Use Devise
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
