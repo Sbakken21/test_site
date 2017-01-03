@@ -1,8 +1,15 @@
 <% provide(:page_title, 'All Posts') %>
 
-<% @posts.each do |post| %>
-    <div class="post_wrapper">
-        <h2 class="title"><%= link_to post.title, post %></h2>
-        <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1>Recent Blog Posts</h1>
+      <% @posts.each do |post| %>
+        <div class="post_wrapper">
+          <h2 class="title"><%= link_to post.title, post %></h2>
+          <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+        </div>
+      <% end %>
     </div>
-<% end %>
+  </div>
+</div>

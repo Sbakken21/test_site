@@ -37,7 +37,11 @@
         
 
         <li class="nav-item">
-          <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
+          <% if current_user.try(:plan_id) == 2 %>
+            <p></p>
+          <% else %>
+            <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
+          <% end %>
         </li>
         
          <% if user_signed_in? %>
