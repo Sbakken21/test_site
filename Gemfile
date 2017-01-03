@@ -39,6 +39,12 @@ gem 'font-awesome-sass', '~> 4.7.0'
 # Use Devise
 gem 'devise'
 
+# Use Stripe for payment processing
+gem 'stripe', '1.48.0'
+
+# Use Figaro for ENV variables
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
