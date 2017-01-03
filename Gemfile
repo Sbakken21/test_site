@@ -45,6 +45,9 @@ gem 'stripe', '1.48.0'
 # Use Figaro for ENV variables
 gem 'figaro'
 
+# Use CanCan
+gem 'cancancan'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

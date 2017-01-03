@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :authenticate_user!, except: [:index, :show]
+ 
     def index
         @posts = Post.all.order('created_at DESC')
     end
@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     end
     
     def update
+        authorize! :update, @post
         @post = Post.find(params[:id])
         
         if @post.update(params[:post].permit(:title, :body))
@@ -37,6 +38,7 @@ class PostsController < ApplicationController
     end
     
     def destroy
+        authorize! :destroy, @post
         @post = Post.find(params[:id])
         @post.destroy
         

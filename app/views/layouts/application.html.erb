@@ -39,8 +39,14 @@
         <li class="nav-item">
           <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
         </li>
-
         
+         <% if user_signed_in? %>
+           <li class="nav-item col-md-2">
+            <h6>Welcome, <%= current_user.email %></h6>
+          </li>
+          <% else %>
+          <% end %>
+
          <% if user_signed_in? %>
            <li class="nav-item dropdown float-sm-right">
             <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
