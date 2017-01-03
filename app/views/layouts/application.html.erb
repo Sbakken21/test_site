@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>XD - <%= yield(:page_title) %></title>
+    <title>XD <%= yield(:page_title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -33,6 +33,12 @@
           </div>
         </li>
         
+
+        <li class="nav-item">
+          <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
+        </li>
+
+        
          <% if user_signed_in? %>
            <li class="nav-item dropdown float-sm-right">
             <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +51,7 @@
               <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
             </div>
          <% else %>
-           <%= link_to user_session_path, class: "nav-link float-sm-right" do %><i class="fa fa-sign-in fa-lg"></i>
+           <%= link_to user_session_path, class: "nav-link float-sm-right" do %>Sign In <i class="fa fa-sign-in fa-lg"></i>
            <% end %>
          <% end %>
         </li>

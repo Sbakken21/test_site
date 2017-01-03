@@ -1,3 +1,10 @@
+
+<% if params[:plan] == '2' %>
+  <h2>Premium Account Sign Up Form</h2>
+<% else %>
+  <h2>Basic Account Sign Up Form</h2>
+<% end %>  
+  
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
