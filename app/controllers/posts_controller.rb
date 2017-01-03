@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
- 
+    
     def index
         @posts = Post.all.order('created_at DESC')
     end
     
     def new
-        @post = Post.new
+        if current_user.try(:admin?)
+            @post = Post.new
+        else
+            redirect_to root_path
+        end
     end
     
     def create
