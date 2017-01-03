@@ -8,13 +8,12 @@ class Ability
       if user.admin?
         can :manage, :all
       else
-        can :update, Comment do |comment|
-          comment.user == user
-        end
         can :read, :all
-        can :destroy, Comment do |comment|
-        comment.user == user
-        end
+        can :update, Comment, :id => user.id
+         
+        can :destroy, Comment, :id => user.id
+        
+        can :create, Comment
       end
   end
 end
