@@ -1,19 +1,23 @@
 
 <div class="container">
   <div class="row">
+    <div class="card">
     <div class="comment clearfix">
     <div class="comment_content">
-      <p class="comment_name"><%= comment.name %></p>
-      <p class="comment_body"><%= comment.body %></p>
-      <p class="comment_time"><time_ago_in_words(comment.created_at) %> Ago</p>
-  </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item comment_name"><%= comment.name %></li>
+        <li class="list-group-item comment_time"><%= time_ago_in_words(comment.created_at) %> ago</li>
+        <li class="list-group-item comment_body"><%= comment.body %></li>
+      </ul>
+    </div>
+    </div>
   
-  <% if can? :destroy, comment %>
-      <p><%= link_to 'Delete', [comment.post, comment],
-                      method: :delete,
-                      class: "button",
-                      data: { confirm: 'Are you sure?' } %>
-        </p>
+      <% if can? :destroy, comment %>
+          <p><%= link_to 'Delete', [comment.post, comment],
+                          method: :delete,
+                          class: "button",
+                          data: { confirm: 'Are you sure?' } %>
+          </p>
       <% end %>
     </div>
   </div>

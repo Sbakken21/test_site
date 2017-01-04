@@ -1,4 +1,4 @@
-
+*Put time stamp for comments next to name form (_comment.html.erb is the file)
 *Fix form layouts (sign in, new post, etc.)
 
 
