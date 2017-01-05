@@ -65,7 +65,8 @@ body {
 
 
 .navbar {
-   border-bottom: 1px solid black !important;
+   border-bottom: 1px solid black;
+   background-color: #333;
 }
 
 h6 {
@@ -86,6 +87,7 @@ h6 {
 
 h1 {
     text-align: center;
+    color: Blue;
 }
 
 .comment_time {
@@ -93,3 +95,8 @@ h1 {
     font-style: italic; 
     
 }
+
+.bar {
+    padding: 0px;
+}
+

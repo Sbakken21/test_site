@@ -6,3 +6,5 @@
 *possibly add a discord/IM chat setup
 
 *Add error alerts and make comments require a certain amount of characters
+
+*replace navbar later with one from bootsnipp (maybe)

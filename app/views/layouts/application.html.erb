@@ -11,65 +11,68 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-full navbar-dark" style="background-color: #333">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <%= link_to root_path, class: "nav-link" do %>
-            <i class="fa fa-home"></i>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Community", temp_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-           <%= link_to "Blog", posts_path, class: "nav-link" %>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        
-
-        <li class="nav-item">
-          <% if current_user.try(:plan_id) == 2 %>
-            <p></p>
-          <% else %>
-            <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
-          <% end %>
-        </li>
-        
-         <% if user_signed_in? %>
-           <li class="nav-item col-md-2">
-            <h6>Welcome, <%= current_user.email %></h6>
+  <nav class="navbar navbar-full navbar-dark" role="navigation" >
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link offset-md-3" do %>
+              <i class="fa fa-home"></i>
+            <% end %>
           </li>
-          <% else %>
-          <% end %>
-
-         <% if user_signed_in? %>
-           <li class="nav-item dropdown float-sm-right">
-            <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-bars"></i></a>
-            <div class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu">
-               <a class="dropdown-item" href="#">Action</a>
-               <a class="dropdown-item" href="#">Another action</a>
-               <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <li class="nav-item">
+            <%= link_to "Community", temp_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+             <%= link_to "Blog", posts_path, class: "nav-link" %>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-         <% else %>
-           <%= link_to user_session_path, class: "nav-link float-sm-right" do %>Sign In <i class="fa fa-sign-in fa-lg"></i>
+          </li>
+          
+  
+          <li class="nav-item">
+            <% if current_user.try(:plan_id) == 2 %>
+              <p></p>
+            <% else %>
+              <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" %>
+            <% end %>
+          </li>
+          
+
+           <% if user_signed_in? %>
+             <li class="nav-item dropdown float-sm-right">
+              <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i></a>
+              <div class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu">
+                 <a class="dropdown-item" href="#">Action</a>
+                 <a class="dropdown-item" href="#">Another action</a>
+                 <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+              </div>
+           <% else %>
+             <%= link_to user_session_path, class: "nav-link float-sm-right" do %>Sign In <i class="fa fa-sign-in fa-lg"></i>
+             <% end %>
            <% end %>
-         <% end %>
-        </li>
-        
-      </ul>
-    </nav>
+          </li>
+     
+           <% if user_signed_in? %>
+             <li class="user-welcome nav-item col-md-2">
+              <h6 class="col-md-2">Welcome, <%= current_user.email %></h6>
+            </li>
+            <% else %>
+            <% end %>
+     
+          </ul>
+        </div>
+      
+  </nav>
     
     <div class="container flash-container">
       <% flash.each do |type, msg| %>
