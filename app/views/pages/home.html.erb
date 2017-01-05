@@ -1,15 +1,18 @@
 <% provide(:page_title, '- Adrain Sucks') %>
 
-<div class= "home-callout text-center container-fluid">
-  <br>
-  <h1>Welcome to Lam Ranch</h1>
-  <br/>
-  <br/>
+<div class= "home-callout container-fluid">
+  <div class="row">
+    <br>
+    <h1>Welcome to Destrux Website</h1>
+    <div class="col">
+     <%= image_tag("medicine_2.png", :alt => "medicine logo") %>
+    </div>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-4 offset-md-1">
+    <div class="col-lg-4 offset-md-8">
       <h2>Subscribe Here</h2>
       <br>
       <%= link_to "Sign up with premium", new_user_registration_path(plan: @pro_plan), class: 'butn btn-primary btn-lg' %>

@@ -21,12 +21,14 @@
     background: #bdc3c7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    color: blue;
 
 }        
 
-body {
-    background-image:url("lines.jpg");
-}
+// body {
+//     background-image:url("lines.jpg");
+// }
 
 
 .nav-link {
@@ -85,11 +87,6 @@ h6 {
     float: right;
 }
 
-h1 {
-    text-align: center;
-    color: Blue;
-}
-
 .comment_time {
     font-size: 10px;
     font-style: italic; 
@@ -100,3 +97,13 @@ h1 {
     padding: 0px;
 }
 
+img {
+    width: 10%;
+    height: auto;
+}
+
+.test {
+    border-style: solid;
+    border-width: 20px;
+    border-color: red;
+}

@@ -1,4 +1,6 @@
-
+*Finish user profile pages
+*Add link to user profile to the signed in dropdown menu
+*limit comment length to certain amount of characters
 *Fix form layouts (sign in, new post, etc.)
 
 
