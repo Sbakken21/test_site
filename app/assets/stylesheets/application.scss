@@ -69,7 +69,7 @@ body {
 }
 
 h6 {
-    color: white;
+    color: #9d9d9d;
 }
 
 .alert {
@@ -105,8 +105,8 @@ img {
 }
 
 .card-header {
-    background-color: #000000;
-    color: white;
+    background-color: #070707;
+    color: #a5a5a5;
 }
 
 .posts-header {
@@ -124,7 +124,7 @@ img {
     border-radius: 0px;
 }
 
-.postcard-body .postshow {
+.postcard-body {
     border-radius: 0px !important;
     background-color: #151515;
     border-color: #333;
@@ -158,3 +158,4 @@ img {
     border-color: #333;
     color: #a5a5a5;
 }
+
