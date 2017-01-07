@@ -124,7 +124,7 @@ img {
     border-radius: 0px;
 }
 
-.postcard-body {
+.postcard-body .postshow {
     border-radius: 0px !important;
     background-color: #151515;
     border-color: #333;
@@ -143,4 +143,18 @@ img {
     border-radius: 0px;
 }
 
+.navbar-nav .nav-link {
+    display: inline-block;
 
+}
+
+.signup {
+    padding-right: 10px;
+}
+
+.postshow {
+    border-radius: 0px !important;
+    background-color: #070707;
+    border-color: #333;
+    color: #a5a5a5;
+}
