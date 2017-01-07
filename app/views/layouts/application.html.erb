@@ -35,9 +35,8 @@
             </div>
           </li>
           
-  
           <li class="nav-item">
-              <%= link_to "Subscribe", new_user_registration_path(plan: @pro_plan), class: "nav-link" if current_user.try(:plan_id) != 2 %>
+            <%= link_to "Sign Up", signup_path, class: "nav-link" if user_signed_in? != true %>
           </li>
           
 

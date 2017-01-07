@@ -12,3 +12,11 @@
 *replace navbar later with one from bootsnipp (maybe)
 *change "subscribe" to "upgrade" ability
 *User bootstrap 3
+
+*change user_name to username. Possibly in schema file
+
+****Make the sign up button take you to a page that lets you choose between basic and premium
+This will act as the homepage similar to devMatch
+
+<%= link_to "Profile", user_path, class: "dropdown-item" %>
+^^^^ need this code to check for if a profile exists before running

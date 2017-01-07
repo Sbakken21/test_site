@@ -30,8 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
 # Use Twitter Bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.0.0.alpha5'
 
 # Use Font Awesome
 gem 'font-awesome-sass', '~> 4.7.0'

@@ -4,6 +4,7 @@
   <div class="row">
     <br>
     <h1>Welcome to Destrux Website</h1>
+    
     <div class="col">
      <%= image_tag("medicine_2.png", :alt => "medicine logo") %>
     </div>
@@ -12,12 +13,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-4 offset-md-2">
-      <h2>Subscribe Here</h2>
-      <br>
-      <%= link_to "Sign up with premium", new_user_registration_path(plan: @pro_plan), class: 'butn btn-primary btn-lg' %>
+    <div class="profile">
+      <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
     </div>
-    <br>
-    <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
   </div>
 </div>
