@@ -52,9 +52,6 @@ body {
 .dropdown-menu {
     background-color: #333;
     text-align: center;
-    left: auto;
-    right: 0;
-    z-index: 0;
 }
 
 .dropdown-item {
@@ -67,8 +64,8 @@ body {
 
 
 .navbar {
-   border-bottom: 1px solid black;
-   background-color: #333;
+  border-bottom: 1px solid black;
+  background-color: #333;
 }
 
 h6 {
@@ -101,3 +98,30 @@ img {
     width: 10%;
     height: auto;
 }
+
+.card {
+    padding: 0;
+    border: 0;
+}
+
+.card-header {
+    background-color: #000000;
+    color: white;
+    text-align: left;
+}
+
+.posts-card {
+    margin-top: 20px;
+}
+
+.card-block {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.list-group-item {
+    border-radius: 0px !important;
+}
+
+
+
