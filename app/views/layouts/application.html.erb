@@ -46,11 +46,11 @@
               <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-bars"></i></a>
               <div class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu">
-                 <a class="dropdown-item" href="#">Action</a>
+                 <%= link_to "Profile", class: "dropdown-item"  %>
                  <a class="dropdown-item" href="#">Another action</a>
                  <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                 <div class="dropdown-divider"></div>
+                 <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
               </div>
            <% else %>
              <%= link_to user_session_path, class: "nav-link float-sm-right" do %>Sign In <i class="fa fa-sign-in fa-lg"></i>

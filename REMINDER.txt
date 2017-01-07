@@ -10,3 +10,5 @@
 *Add error alerts and make comments require a certain amount of characters
 
 *replace navbar later with one from bootsnipp (maybe)
+*change "subscribe" to "upgrade" ability
+*User bootstrap 3
