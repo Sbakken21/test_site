@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
     
     def index
-        @posts = Post.order('created_at DESC')
+        @posts = Post.order('created_at DESC').limit(5)
     end
-    
+
     def new
         if current_user.try(:admin?)
             @post = Post.new
@@ -48,6 +48,7 @@ class PostsController < ApplicationController
         
         redirect_to posts_path
     end
+    
     
     private
         def post_params
