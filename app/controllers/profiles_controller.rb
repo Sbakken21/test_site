@@ -18,6 +18,10 @@ class ProfilesController < ApplicationController
     end
   end
   
+  def edit
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
+  end
   private
     def profile_params
       params.require(:profile).permit(:user_name, :first_name, :last_name, :avatar, :phone_number, :contact_email, :description)
