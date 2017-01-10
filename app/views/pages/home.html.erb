@@ -13,8 +13,10 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+
+  <div class="container">
+    <div class="row">
+      <%= link_to "Users", users_path, class: "btn btn-default" if user_signed_in? %>
    
+    </div>
   </div>
-</div>
