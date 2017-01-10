@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 
 # Use Twitter Bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Use Font Awesome
 gem 'font-awesome-sass', '~> 4.7.0'
