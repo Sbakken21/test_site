@@ -1,3 +1,5 @@
+
+*Make navbar menu flush with navbar (perhaps take the menu out of the nav container somehow)
 *Finish user profile pages
 *Add link to user profile to the signed in dropdown menu
 *limit comment length to certain amount of characters
