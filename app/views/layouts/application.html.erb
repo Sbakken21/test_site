@@ -12,7 +12,7 @@
 
   <body>
     <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
-      <div class="container">
+      <!--<div class="container">      ----This is to "center" the navbar-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,16 +30,18 @@
           
           <% if user_signed_in? %>
               <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-th"></i></i></a>
+              <i class="fa fa-ellipsis-v"></i></i></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 
               <% if current_user.profile %>
                 <li class="dropdown-item"><h6>Welcome, </h6>
                 <%= current_user.profile.user_name %></h6></li>
+                <div class="dropdown-divider"></div>
                 <%= link_to "Profile", user_path(current_user.id),  class: "dropdown-item" %>
               <% else %>
                 <li class="dropdown-item"><h6>Welcome, </h6>
-                <%= current_user.email %></h6></li>             
+                <%= current_user.email %></h6></li>  
+                <div class="dropdown-divider"></div>
                 <li><%= link_to "Create Profile", new_user_profile_path(user_id: current_user.id), class: "dropdown-item" %></li>
               <% end %>
               <div class= "p-2"><i class="fa fa-glass"></i>blah</div>
@@ -65,7 +67,7 @@
           
           </div>
         </div>
-      </div>
+      <!--</div>      <-----This is the div that goes with the container-->
     </nav>
  
 
