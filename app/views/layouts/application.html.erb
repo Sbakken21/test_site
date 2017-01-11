@@ -20,7 +20,7 @@
           <i class="fa fa-home fa-lg"></i>
         <% end %>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mr-auto">
             <li><%= link_to "Community", temp_path, class: "nav-item nav-link" %></li>
             <li><%= link_to "Blog", posts_path, class: "nav-link" %></li>
           </ul>
@@ -29,14 +29,17 @@
           
           
           <% if user_signed_in? %>
-            <li class="nav-link dropdown">
               <a class="nav-link dropdown-toggle" href="http://website.com/profile" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-th"></i></i></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-       
+                
               <% if current_user.profile %>
+                <li class="dropdown-item"><h6>Welcome, </h6>
+                <%= current_user.profile.user_name %></h6></li>
                 <%= link_to "Profile", user_path(current_user.id),  class: "dropdown-item" %>
               <% else %>
+                <li class="dropdown-item"><h6>Welcome, </h6>
+                <%= current_user.email %></h6></li>             
                 <li><%= link_to "Create Profile", new_user_profile_path(user_id: current_user.id), class: "dropdown-item" %></li>
               <% end %>
               <div class= "p-2"><i class="fa fa-glass"></i>blah</div>
