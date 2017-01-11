@@ -46,6 +46,7 @@
               <% end %>
               <div class= "p-2"><i class="fa fa-glass"></i>blah</div>
               <div class= "p-2">blahblahblah</div>
+              <li><%= link_to "My Account", edit_user_registration_path, class: "dropdown-item" %></li>
               <div class="dropdown-divider"></div>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             </ul>

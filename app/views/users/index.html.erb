@@ -16,6 +16,9 @@
                 <div class= "index-usernames">
                   <%= link_to user do %>
                     <h2><%= user.profile.user_name %></h2>
+                    <% if user.plan_id == 2 %>
+                     <span class="badge badge-pill badge-danger">PRO</span>
+                    <% end %>
                   <% end %>
                 </div>
               </div>
