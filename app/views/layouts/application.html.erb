@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
-      <!--<div class="container">      ----This is to "center" the navbar-->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-toggleable-sm navbar-static-top navbar-light bg-faded">
+      <div class="container">      
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <%= link_to root_path, class: "navbar-brand" do %>
@@ -49,7 +49,6 @@
               <div class="dropdown-divider"></div>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             </ul>
-          </div>
           
           <% else %>
           <ul class="navbar-nav">
@@ -67,7 +66,7 @@
           
           </div>
         </div>
-      <!--</div>      <-----This is the div that goes with the container-->
+      </div>      
     </nav>
  
 
