@@ -1,14 +1,10 @@
 <% provide(:page_title, '- Adrain Sucks') %>
 
-<div class= "home-callout container-fluid">
-  <div class="row">
-    <br>
-    <div class= "container">
+<div class= "jumbotron-fluid">
+  <div class="container">
       <h1>Welcome to Destrux Website</h1>
-      
-      <div class="col">
-        <%= image_tag("medicine_2.png", :alt => "medicine logo") %>
-      </div>
+      <div class="logo">
+        <%= image_tag("logo.png", :alt => "website logo") %>
       </div>
   </div>
 </div>
@@ -16,7 +12,7 @@
 
   <div class="container">
     <div class="row">
-      <%= link_to "Users", users_path, class: "btn btn-default" if user_signed_in? %>
+      <%= link_to "Users", users_path, class: "btn btn-primary" if user_signed_in? %>
    
     </div>
   </div>
