@@ -1,6 +1,30 @@
-*Make admin privilages 
+
+
+****Fix collapse navbar on mobile****
+
+
+
+
+
+*Finish user profile pages
+*Add link to user profile to the signed in dropdown menu
+*limit comment length to certain amount of characters
 *Fix form layouts (sign in, new post, etc.)
-*Fix routes (specifically new posts needs a route, but preferably only for admin)
-*Look at user database
+
+
 *create user customizations
-*possibly add a discord/im chat setup
+*possibly add a discord/IM chat setup
+
+*Add error alerts and make comments require a certain amount of characters
+
+*replace navbar later with one from bootsnipp (maybe)
+*change "subscribe" to "upgrade" ability
+*User bootstrap 3
+
+*change user_name to username. Possibly in schema file
+
+****Make the sign up button take you to a page that lets you choose between basic and premium
+This will act as the homepage similar to devMatch
+
+<%= link_to "Profile", user_path, class: "dropdown-item" %>
+^^^^ need this code to check for if a profile exists before running

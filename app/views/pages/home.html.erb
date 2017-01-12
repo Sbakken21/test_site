@@ -1,8 +1,18 @@
-<% provide(:page_title, 'Adrain Sucks') %>
+<% provide(:page_title, '- Adrain Sucks') %>
 
-<div class= "home-callout text-center container-fluid">
-    <br>
-    <h1>Welcome to Test Site</h1>
-    <br/>
-    <br/>
+<div class= "jumbotron-fluid">
+  <div class="container">
+      <h1>Welcome to Destrux Website</h1>
+      <div class="logo">
+        <%= image_tag("speedwagon.jpg", :alt => "website logo") %>
+      </div>
+  </div>
 </div>
+
+
+  <div class="container">
+    <div class="row">
+      <%= link_to "Users", users_path, class: "btn btn-primary" if user_signed_in? %>
+   
+    </div>
+  </div>

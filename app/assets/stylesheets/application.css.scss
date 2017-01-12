@@ -10,60 +10,117 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_tree .
+ *= require_self
  */
 
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-.home-callout {
+.jumbotron-fluid {
     //Gradient provided by uigradients.com
     background: #bdc3c7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }        
 
 body {
-    background-image:url("lines.jpg");
+    background-image:url("website-background.jpg");
 }
 
 
-.nav-link {
-    color: #9d9d9d;
-    &:hover {
-        color: white;
-    }
-}
-
-.navbar-brand {
-    color: #9d9d9d;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #9d9d9d;
-    &:hover {
-        color: white;
-    }
-}
-
-.dropdown-menu {
-    background-color: #333;
-    text-align: center;
-    left: auto;
-    right: 0;
-    z-index: 0;
-}
-
-.dropdown-item {
-    color: #9d9d9d;
-}
-
-.dropdown-divider {
-    background-color: #9d9d9d;
+img {
+    width: 250px;
+    height: auto;
 }
 
 
-.navbar {
-   border-bottom: 1px solid black !important;
+// NEW CSS FOR LOG IN
+
+.card-container {
+    max-width: 350px;
+    padding: 40px 40px !important;
 }
+
+.btn-signin {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.card-signin {
+    background-color: #F7F7F7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba (0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+} 
+
+.form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+.shared-links {
+    color: rgb(104, 145, 162);
+}
+
+.form-input{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// CSS for Post index
+
+.admin-post-button {
+    margin-left: 175px;
+    margin-top: 5px;
+}
+
+// CSS for Sign Up
+
+// .container-signup {
+    
+// }

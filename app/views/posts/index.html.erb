@@ -1,8 +1,26 @@
 <% provide(:page_title, 'All Posts') %>
 
-<% @posts.each do |post| %>
-    <div class="post_wrapper">
-        <h2 class="title"><%= link_to post.title, post %></h2>
-        <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+<div class="container">
+  <div class="row">
+    <div class="card posts-card col-md-8 offset-md-2">
+      <div class="card-header posts-header">
+        <h3>Recent Blog Posts</h3>
+      </div>
+      <ul class="list-unstyled">
+        <div class="card-block card-body">
+          <li class ="card-block postcard-body">
+            <% @posts.each do |post| %>
+              <h2 class="title"><%= link_to post.title, post %></h2>
+              <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+            <% end %>
+          </li>
+        </div>
+      </ul>
     </div>
-<% end %>
+  </div>
+  <div class="col-md-2 admin-post-button">
+    <% if current_user.admin %>
+      <%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
