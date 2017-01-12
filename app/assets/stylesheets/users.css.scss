@@ -1,6 +1,7 @@
 .avatar-show-img {
   width: 128px;
   height: 128px;
+  border-radius: 50%;
 }
 
 .card.profile-description {
@@ -25,3 +26,8 @@
 .card.grey-bg {
   background-color: #D3D3D3;
 }
+
+.plan-tag {
+  display: inline-block !important;
+}
+

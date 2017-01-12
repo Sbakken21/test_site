@@ -18,4 +18,9 @@
       </ul>
     </div>
   </div>
+  <div class="col-md-2 admin-post-button">
+    <% if current_user.admin %>
+      <%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
