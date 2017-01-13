@@ -12,14 +12,16 @@
       </ul>
     </div>
     </div>
-  
-      <% if can? :destroy, comment %>
+    
+    
+      <% if current_user.id == comment.user_id %>
           <p><%= link_to 'Delete', [comment.post, comment],
                           method: :delete,
-                          class: "button",
+                          class: "btn btn-danger",
                           data: { confirm: 'Are you sure?' } %>
           </p>
       <% end %>
+
     </div>
   </div>
 </div>

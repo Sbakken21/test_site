@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-sm navbar-static-top navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-sm navbar fixed-top navbar-light bg-faded">
       <div class="container">      
         <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -44,8 +44,6 @@
                 <div class="dropdown-divider"></div>
                 <li><%= link_to "Create Profile", new_user_profile_path(user_id: current_user.id), class: "dropdown-item" %></li>
               <% end %>
-              <div class= "p-2"><i class="fa fa-glass"></i>blah</div>
-              <div class= "p-2">blahblahblah</div>
               <li><%= link_to "My Account", edit_user_registration_path, class: "dropdown-item" %></li>
               <div class="dropdown-divider"></div>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
