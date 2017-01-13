@@ -1,18 +1,27 @@
+<div class= "jumbotron-fluid profile-banner">
+ <%= image_tag @user.profile.background.url, class: "background-show-img center-block" %>
+</div>  
 <div class= "container profile-page">
   <div class= "row">
     <div class="col-md-3">
-     <%= image_tag @user.profile.avatar.url, class: "avatar-show-img" %>
-     <% if current_user.profile == @user.profile %>
-       <%= link_to "Edit your profile", edit_user_profile_path(current_user.id), class: "btn btn-primary" %>
-     <% end %>
+      <div class="card avatar-block">
+       <%= image_tag @user.profile.avatar.url, class: "avatar-show-img center-block" %>
+       <h6 class= "text-center"><%= @user.profile.user_name %></h6>
+       <p class="text-center"><%= @user.profile.description %></p>
+      </div>
     </div>
     
+   
     <div class="col-md-6">
+      <div class="card main-text-block">
       <h1><%= @user.profile.user_name %></h1><br>
       <%= @user.profile.first_name %> <%= @user.profile.last_name %>
-      <div class= "card profile-description">
-        <%= @user.profile.description %>
       </div>
     </div>
   </div>
 </div>
+
+
+     <% if current_user.profile == @user.profile %>
+       <%= link_to "Edit your profile", edit_user_profile_path(current_user.id), class: "btn btn-primary" %>
+     <% end %>

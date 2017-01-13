@@ -1,16 +1,33 @@
+.profile-banner {
+  height: 500px;
+
+}
+
+.background-show-img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .avatar-show-img {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  border: 5px solid white;
+  vertical-align: middle;
+  margin-top: -70px;
 }
 
-.card.profile-description {
-  background-color: #151515;
+.avatar-block {
+  background-color: #090909 !important;
+  color: #a5a5a5 ;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.profile-page {
-  margin-top: 20px;
-}
 
 // For User Index Page styles
 .user-index-avatar {
