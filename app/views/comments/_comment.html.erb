@@ -5,8 +5,8 @@
     <div class="comment clearfix">
     <div class="comment_content">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item comment_name"><%= comment.name %> 
-        <span class="comment_time"><%= time_ago_in_words(comment.created_at) %> ago</span> 
+        <li class="list-group-item comment_name"><%= comment.user_id %> 
+        <span class="comment_time"> <%= time_ago_in_words(comment.created_at) %> ago</span> 
         </li>
         <li class="list-group-item comment_body"><%= comment.body %></li>
       </ul>
@@ -17,7 +17,7 @@
       <% if current_user.id == comment.user_id %>
           <p><%= link_to 'Delete', [comment.post, comment],
                           method: :delete,
-                          class: "btn btn-danger",
+                          class: "post-button",
                           data: { confirm: 'Are you sure?' } %>
           </p>
       <% end %>

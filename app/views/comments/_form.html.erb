@@ -2,13 +2,9 @@
     <div class="row">
         <%= form_for([@post, @post.comments.build]) do |f| %>
             
-            <p>
-                <%= f.label :name %>
-                <%= f.text_field :name, class: "form-control" %>
-            </p>
+
             
             <p>
-                <%= f.label :body %>
                 <%= f.text_area :body, class: "form-control" %>
             </p>
             <br>

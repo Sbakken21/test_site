@@ -4,6 +4,13 @@
 
 ****Fix so that anyone (not just users) can see blog posts
 
+****Need to link comments section to profile, retrieve variables :avatar (for profile pic) and user_name (for username)
+
+***Make modal popup for deleting comments instead of current popup
+
+*****Fix website crashing when comment is left empty and submitted
+
+*****Use Froala v2 (look up on youtube) or similar gem to give blog editing capabilities
 
 
 *Improve user profile page
