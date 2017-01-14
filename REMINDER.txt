@@ -2,7 +2,7 @@
 
 ****Fix collapse navbar on mobile****
 
-
+****Fix so that anyone (not just users) can see blog posts
 
 
 

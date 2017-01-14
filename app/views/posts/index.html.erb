@@ -2,17 +2,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="card posts-card col-md-8 offset-md-2">
+    <div class="posts-card col-md-8 offset-md-2">
       <div class="card-header posts-header">
         <h3>Recent Blog Posts</h3>
       </div>
-      <ul class="list-unstyled">
-        <div class="card-block card-body">
+      <ul class="list-unstyled posts-list">
+         <% @posts.each do |post| %>
           <li class ="card-block postcard-body">
-            <% @posts.each do |post| %>
+            <div class= "card row text-center posts-row">
+           
               <h2 class="title"><%= link_to post.title, post %></h2>
               <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
             <% end %>
+            </div>
           </li>
         </div>
       </ul>
