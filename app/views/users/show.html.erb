@@ -2,7 +2,7 @@
   <% if @user.profile.background_file_name != nil %>
    <%= image_tag @user.profile.background.url, class: "background-show-img center-block" %>
   <% else %>
-    <%= image_tag("dio2.jpg", class: "temp-background", :alt => "dio empty background") %>
+    <%= image_tag("placeholder.png", class: "temp-background", :alt => "empty background") %>
   <% end %>
 </div>  
 <div class= "container profile-page">
